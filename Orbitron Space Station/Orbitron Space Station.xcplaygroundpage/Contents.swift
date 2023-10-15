@@ -23,7 +23,7 @@ class ControlCenter: StationModule {
             print("⚠️ LOCKDOWN!")
             isLockedDown = true
         } else {
-            print("Security code is incorrect ❌")
+            print("❌ Security code is incorrect")
         }
     }
     
@@ -39,9 +39,9 @@ class ControlCenter: StationModule {
     
     func isCCOnLockdown() {
         if isLockedDown {
-            print("Control Center is ⚠️ on lockdown.")
+            print("⚠️ Control Center is on lockdown.")
         } else {
-            print("Control Center is ❇️ not on lockdown.")
+            print("❇️ Control Center is not on lockdown.")
         }
     }
 }
@@ -123,7 +123,7 @@ class OrbitronSpaceStation {
 
 class MissionControl {
     var spaceStation: OrbitronSpaceStation?
-    var isConnected: Bool = false
+    private var isConnected: Bool = false
     
     func conncectWithOSS(station: OrbitronSpaceStation, accesToken: String) {
         if  station.controlCenter.connection(accesToken: accesToken) == true {
@@ -157,7 +157,7 @@ class MissionControl {
 let orbitronSpaceStation = OrbitronSpaceStation()
 let missionControl = MissionControl()
 
-missionControl.conncectWithOSS(station: orbitronSpaceStation, accesToken: "Qwerty1")
+missionControl.conncectWithOSS(station: orbitronSpaceStation, accesToken: "Qwerty")
 missionControl.requestControlCenterStatus(station: orbitronSpaceStation)
 orbitronSpaceStation.controlCenter.drone?.task = "Check system"
 orbitronSpaceStation.researchLab.drone?.task = "Remove used elements"
@@ -166,4 +166,4 @@ missionControl.requestDroneStatus(station: orbitronSpaceStation)
 missionControl.requestOxygenStatus(station: orbitronSpaceStation)
 missionControl.requestControlCenterStatus(station: orbitronSpaceStation)
 orbitronSpaceStation.ccLocker(password: "IncorrectPass")
-orbitronSpaceStation.ccLocker(password: "Qwerty")
+orbitronSpaceStation.ccLocker(password: "Qwerty1")
