@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
     
     @IBOutlet private weak var mainStackView: UIStackView!
     @IBOutlet private weak var header: UIStackView!
