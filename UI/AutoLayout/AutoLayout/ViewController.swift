@@ -61,7 +61,7 @@ final class ViewController: UIViewController {
     
     private func setupCoffeeArray() {
         
-        let naleqiani = Coffee(name: "Naleqiani", withChocolate: false, price: 3.49, rating: 5.0, description: "A smooth naleqiani coffee with a medium roast")
+        let naleqiani = Coffee(name: "Naleqiani", withChocolate: false, price: 3.49, rating: 5.0, description: "A smooth naleqiani coffee with a medium roast, A smooth naleqiani coffee with a medium roastA smooth naleqiani coffee with a medium roastA smooth naleqiani coffee with a medium roast")
         let rastvarimi = Coffee(name: "Rastvarimi", withChocolate: false, price: 2.99, rating: 4.9, description: "A rich and bold rastvarimi with a strong flavor")
         
         coffeeArray = [naleqiani, rastvarimi]
