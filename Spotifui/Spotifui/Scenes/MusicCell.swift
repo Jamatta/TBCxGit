@@ -25,6 +25,12 @@ class MusicCell: UITableViewCell {
         setTitleLableConstraints()
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        musicImageView.image = nil
+        musicTitle.text = nil
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

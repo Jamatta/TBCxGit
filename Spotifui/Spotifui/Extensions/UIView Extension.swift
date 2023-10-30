@@ -36,3 +36,4 @@ extension UIColor {
 }
 
 let spotyGreen = UIColor(hex: "#1DB954")
+let spotyDark = UIColor(hex: "#191414")

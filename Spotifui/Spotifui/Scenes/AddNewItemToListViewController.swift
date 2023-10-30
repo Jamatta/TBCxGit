@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol AddNewMusicInArray: AnyObject {
+protocol AddNewMusicDelegate: AnyObject {
     func addNewMusic(title: String, image: UIImage)
 }
 
 class AddNewItemToListViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
-    weak var addNewMusic: AddNewMusicInArray?
+    weak var delegate: AddNewMusicDelegate?
     
     private let contentStackView: UIStackView = {
         let stackView = UIStackView()
@@ -55,7 +55,6 @@ class AddNewItemToListViewController: UIViewController, UIImagePickerControllerD
     private let addButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Add Music", for: .normal)
-        button.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -76,7 +75,10 @@ class AddNewItemToListViewController: UIViewController, UIImagePickerControllerD
         contentStackView.addArrangedSubview(addButton)
         
         view.addSubview(contentStackView)
-        
+        constraintsSetup()
+    }
+    
+    private func constraintsSetup() {
         NSLayoutConstraint.activate([
             contentStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             contentStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
@@ -94,9 +96,9 @@ class AddNewItemToListViewController: UIViewController, UIImagePickerControllerD
         present(imagePicker, animated: true, completion: nil)
     }
 
-    @objc func addButtonTapped() {
+    func addButtonTapped() {
         if let title = musicTitleTextField.text, !title.isEmpty, let image = selectedImage {
-            addNewMusic?.addNewMusic(title: title, image: image)
+            delegate?.addNewMusic(title: title, image: image)
             dismiss(animated: true, completion: nil)
         } else {
             print("Title is required")

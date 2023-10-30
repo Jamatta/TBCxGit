@@ -17,6 +17,7 @@
 		CC31012F2AEED847007626EC /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC31012E2AEED847007626EC /* Music.swift */; };
 		CC3101312AEED900007626EC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3101302AEED900007626EC /* Constants.swift */; };
 		CC3101332AEEE81E007626EC /* AddNewItemToListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3101322AEEE81E007626EC /* AddNewItemToListViewController.swift */; };
+		CC641DF52AF0376A009EF1B9 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC641DF42AF0376A009EF1B9 /* ItemDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CC31012E2AEED847007626EC /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		CC3101302AEED900007626EC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CC3101322AEEE81E007626EC /* AddNewItemToListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewItemToListViewController.swift; sourceTree = "<group>"; };
+		CC641DF42AF0376A009EF1B9 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				CC3101272AEECBFE007626EC /* SpotifuiViewController.swift */,
 				CC31012C2AEED337007626EC /* MusicCell.swift */,
 				CC3101322AEEE81E007626EC /* AddNewItemToListViewController.swift */,
+				CC641DF42AF0376A009EF1B9 /* ItemDetailsViewController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			files = (
 				CC31012D2AEED337007626EC /* MusicCell.swift in Sources */,
 				CC31012B2AEED174007626EC /* UIView Extension.swift in Sources */,
+				CC641DF52AF0376A009EF1B9 /* ItemDetailsViewController.swift in Sources */,
 				CC3101282AEECBFE007626EC /* SpotifuiViewController.swift in Sources */,
 				CC3101102AEECA8C007626EC /* AppDelegate.swift in Sources */,
 				CC3101312AEED900007626EC /* Constants.swift in Sources */,

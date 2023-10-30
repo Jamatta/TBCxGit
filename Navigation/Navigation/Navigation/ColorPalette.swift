@@ -313,7 +313,6 @@ class ColorPalette: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    
     func vurlyWoodBG() {
         selectionDelegate?.didBGChoice(isBG: true, color: vurlyWood)
         dismiss(animated: true)
