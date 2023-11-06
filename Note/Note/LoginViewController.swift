@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
         return stackview
     }()
     
-    private let emailTextField: UITextField = {
+    private let usernameTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -80,7 +80,6 @@ class LoginViewController: UIViewController {
         return button
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -89,7 +88,6 @@ class LoginViewController: UIViewController {
         contentWrapperStackViewSetup()
         constraintSetup()
         setupPushToNoteListVCButton()
-        saveUsernameAndPasswordToKeychain()
     }
     
     private func constraintSetup() {
@@ -102,8 +100,8 @@ class LoginViewController: UIViewController {
             inputsStackView.leadingAnchor.constraint(equalTo: contentWrapperStackView.leadingAnchor),
             inputsStackView.trailingAnchor.constraint(equalTo: contentWrapperStackView.trailingAnchor),
             
-            emailTextField.leadingAnchor.constraint(equalTo: inputsStackView.leadingAnchor),
-            emailTextField.trailingAnchor.constraint(equalTo: inputsStackView.trailingAnchor),
+            usernameTextField.leadingAnchor.constraint(equalTo: inputsStackView.leadingAnchor),
+            usernameTextField.trailingAnchor.constraint(equalTo: inputsStackView.trailingAnchor),
             
             passTextField.leadingAnchor.constraint(equalTo: inputsStackView.leadingAnchor),
             passTextField.trailingAnchor.constraint(equalTo: inputsStackView.trailingAnchor),
@@ -112,7 +110,7 @@ class LoginViewController: UIViewController {
             button.trailingAnchor.constraint(equalTo: inputsStackView.trailingAnchor),
             button.heightAnchor.constraint(equalToConstant: 44),
             
-            emailTextField.heightAnchor.constraint(equalToConstant: 56),
+            usernameTextField.heightAnchor.constraint(equalToConstant: 56),
             passTextField.heightAnchor.constraint(equalToConstant: 56),
         ])
     }
@@ -121,7 +119,7 @@ class LoginViewController: UIViewController {
         contentWrapperStackView.addArrangedSubview(inputsStackView)
         contentWrapperStackView.addArrangedSubview(buttonStackView)
         
-        inputsStackView.addArrangedSubview(emailTextField)
+        inputsStackView.addArrangedSubview(usernameTextField)
         inputsStackView.addArrangedSubview(passTextField)
         
         buttonStackView.addArrangedSubview(button)
@@ -150,7 +148,7 @@ class LoginViewController: UIViewController {
     }
        
     private func isFirstLogin() -> Bool {
-        return !UserDefaults.standard.bool(forKey: "hasLoggedInBefore")
+        !UserDefaults.standard.bool(forKey: "hasLoggedInBefore")
     }
     
     private func markFirstLogin() {
@@ -158,13 +156,13 @@ class LoginViewController: UIViewController {
     }
     
     private func saveUsernameAndPasswordToKeychain() {
-        if let username = emailTextField.text, let password = passTextField.text {
+        if let username = usernameTextField.text, let password = passTextField.text {
             KeychainManager.shared.saveUsernameAndPassword(username: username, password: password)
         }
     }
     
     private func checkSavedCredentials() {
-        if let username = emailTextField.text, let password = passTextField.text {
+        if let username = usernameTextField.text, let password = passTextField.text {
             if let savedPassword = KeychainManager.shared.getPasswordForUsername(username: username), savedPassword == password {
                 print("Hello, returning user")
             } else {
@@ -176,9 +174,7 @@ class LoginViewController: UIViewController {
 
 class KeychainManager {
     static let shared = KeychainManager()
-    
-    private let serviceName = "YourAppName"
-    
+        
     func saveUsernameAndPassword(username: String, password: String) {
         guard let data = password.data(using: .utf8) else {
             return
@@ -186,7 +182,6 @@ class KeychainManager {
         
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
-            kSecAttrService as String: serviceName,
             kSecAttrAccount as String: username,
             kSecValueData as String: data
         ]
@@ -202,7 +197,6 @@ class KeychainManager {
     func getPasswordForUsername(username: String) -> String? {
         let query: [String: Any] = [
             kSecClass as String: kSecClassGenericPassword,
-            kSecAttrService as String: serviceName,
             kSecAttrAccount as String: username,
             kSecReturnData as String: kCFBooleanTrue,
             kSecMatchLimit as String: kSecMatchLimitOne
