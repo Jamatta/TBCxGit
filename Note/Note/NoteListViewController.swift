@@ -22,7 +22,10 @@ class NoteListViewController: UIViewController, UINavigationControllerDelegate {
         configureTableView()
         notes = fetchData()
         configureNavbar()
+       
     }
+    
+    
     
     private func configureTableView() {
         view.addSubview(tableView)

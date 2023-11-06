@@ -12,4 +12,3 @@ let blackColor = UIColor(hex: "#010101")
 let whiteColor = UIColor(hex: "#f7f7f7")
 let geocell = UIColor(hex: "#834cab")
 let greyColor = UIColor(hex: "#b0b0b0")
-

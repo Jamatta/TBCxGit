@@ -90,7 +90,6 @@ class LoginViewController: UIViewController {
         constraintSetup()
         setupPushToNoteListVCButton()
         saveUsernameAndPasswordToKeychain()
-        retrievePasswordFromKeychain()
     }
     
     private func constraintSetup() {
@@ -137,7 +136,25 @@ class LoginViewController: UIViewController {
     private func pushToNoteListVC() {
         let noteListVC = NoteListViewController()
         navigationController?.pushViewController(noteListVC, animated: true)
-        checkIfCredentialsExist()
+        checkLoginSesion()
+    }
+    
+    private func checkLoginSesion() {
+        if isFirstLogin() {
+            print("Hello, first time")
+            saveUsernameAndPasswordToKeychain()
+            markFirstLogin()
+        } else {
+            checkSavedCredentials()
+        }
+    }
+       
+    private func isFirstLogin() -> Bool {
+        return !UserDefaults.standard.bool(forKey: "hasLoggedInBefore")
+    }
+    
+    private func markFirstLogin() {
+        UserDefaults.standard.set(true, forKey: "hasLoggedInBefore")
     }
     
     private func saveUsernameAndPasswordToKeychain() {
@@ -146,24 +163,21 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func retrievePasswordFromKeychain() {
-        if let username = emailTextField.text, let password = KeychainManager.shared.getPasswordForUsername(username: username) {
-            passTextField.text = password
+    private func checkSavedCredentials() {
+        if let username = emailTextField.text, let password = passTextField.text {
+            if let savedPassword = KeychainManager.shared.getPasswordForUsername(username: username), savedPassword == password {
+                print("Hello, returning user")
+            } else {
+                print("Incorrect credentials")
+            }
         }
     }
-    
-    private func checkIfCredentialsExist() {
-        if let username = emailTextField.text, let password = KeychainManager.shared.getPasswordForUsername(username: username) {
-            print("აქ იყო ერმალოს ძმაკაცი")
-        }
-    }
-    
 }
 
 class KeychainManager {
     static let shared = KeychainManager()
     
-    private let serviceName = "NotesApp"
+    private let serviceName = "YourAppName"
     
     func saveUsernameAndPassword(username: String, password: String) {
         guard let data = password.data(using: .utf8) else {
@@ -176,6 +190,8 @@ class KeychainManager {
             kSecAttrAccount as String: username,
             kSecValueData as String: data
         ]
+        
+        SecItemDelete(query as CFDictionary) 
         
         let status = SecItemAdd(query as CFDictionary, nil)
         if status != errSecSuccess {
