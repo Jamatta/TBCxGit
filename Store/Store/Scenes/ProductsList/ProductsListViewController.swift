@@ -97,7 +97,7 @@ class ProductsListViewController: UIViewController {
 extension ProductsListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        productsViewModel.products?.count ?? 0
+        products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -115,16 +115,16 @@ extension ProductsListViewController: UITableViewDataSource, UITableViewDelegate
 }
 
 extension ProductsListViewController: ProductsListViewModelDelegate {
+    func productsFetched(_ products: [ProductModel]) {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            self.products = products
+            self.productsTableView.reloadData()
+        }
+    }
     
     func productsAmountChanged() {
         totalPriceLbl.text = "Total price: \(productsViewModel.getTotalPrice() ?? 0) $"
-    }
-    
-    func productsFetched() {
-        DispatchQueue.main.async {
-            self.activityIndicator.stopAnimating()
-            self.productsTableView.reloadData()
-        }
     }
     
     func handleError(_ error: ProductsListError) {

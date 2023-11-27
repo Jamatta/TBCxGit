@@ -13,7 +13,7 @@ enum ProductsListError: Error {
 }
 
 protocol ProductsListViewModelDelegate: AnyObject {
-    func productsFetched()
+    func productsFetched(_ products: [ProductModel])
     func productsAmountChanged()
     func handleError(_ error: ProductsListError)
 }
@@ -37,7 +37,7 @@ class ProductsListViewModel {
                     self?.products = []
                 }
                 self?.products?.append(contentsOf: products)
-                self?.delegate?.productsFetched()
+                self?.delegate?.productsFetched(products)
             case .failure(let Error):
                 let networkErrorMessage = "Failed to fetch products. Please check your internet connection and try again."
                 let customError = ProductsListError.networkError(networkErrorMessage)
