@@ -14,6 +14,8 @@
 		CC469E4C2B25E04B004D094B /* UI Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC469E4B2B25E04B004D094B /* UI Extension.swift */; };
 		CC469E4E2B25E525004D094B /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC469E4D2B25E525004D094B /* ProductsViewModel.swift */; };
 		CC469E502B25E5E9004D094B /* ProductCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC469E4F2B25E5E9004D094B /* ProductCellView.swift */; };
+		CC4CFC022B2798E400235212 /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CFC012B2798E400235212 /* ProductModel.swift */; };
+		CC4CFC0B2B279A7E00235212 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4CFC0A2B279A7E00235212 /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		CC469E4B2B25E04B004D094B /* UI Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Extension.swift"; sourceTree = "<group>"; };
 		CC469E4D2B25E525004D094B /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
 		CC469E4F2B25E5E9004D094B /* ProductCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellView.swift; sourceTree = "<group>"; };
+		CC4CFC012B2798E400235212 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		CC4CFC0A2B279A7E00235212 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +61,10 @@
 		CC469E3C2B25DEF8004D094B /* Nikora */ = {
 			isa = PBXGroup;
 			children = (
-				CC469E3D2B25DEF8004D094B /* NikoraApp.swift */,
-				CC469E4B2B25E04B004D094B /* UI Extension.swift */,
-				CC469E3F2B25DEF8004D094B /* ContentListView.swift */,
-				CC469E4F2B25E5E9004D094B /* ProductCellView.swift */,
-				CC469E4D2B25E525004D094B /* ProductsViewModel.swift */,
-				CC469E412B25DEFB004D094B /* Assets.xcassets */,
+				CC4CFC092B2799C000235212 /* Source */,
+				CC4CFC052B27994500235212 /* App */,
+				CC4CFC042B27993C00235212 /* Scene */,
+				CC4CFC032B27993400235212 /* Model */,
 				CC469E432B25DEFB004D094B /* Preview Content */,
 			);
 			path = Nikora;
@@ -74,6 +76,66 @@
 				CC469E442B25DEFB004D094B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC4CFC032B27993400235212 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC4CFC012B2798E400235212 /* ProductModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CC4CFC042B27993C00235212 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				CC4CFC072B27996D00235212 /* ViewModel */,
+				CC4CFC062B27996100235212 /* View */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		CC4CFC052B27994500235212 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CC469E4B2B25E04B004D094B /* UI Extension.swift */,
+				CC469E3D2B25DEF8004D094B /* NikoraApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CC4CFC062B27996100235212 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC469E3F2B25DEF8004D094B /* ContentListView.swift */,
+				CC4CFC082B27997A00235212 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CC4CFC072B27996D00235212 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CC469E4D2B25E525004D094B /* ProductsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CC4CFC082B27997A00235212 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC4CFC0A2B279A7E00235212 /* CartView.swift */,
+				CC469E4F2B25E5E9004D094B /* ProductCellView.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CC4CFC092B2799C000235212 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				CC469E412B25DEFB004D094B /* Assets.xcassets */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC469E402B25DEF8004D094B /* ContentListView.swift in Sources */,
+				CC4CFC0B2B279A7E00235212 /* CartView.swift in Sources */,
+				CC4CFC022B2798E400235212 /* ProductModel.swift in Sources */,
 				CC469E4C2B25E04B004D094B /* UI Extension.swift in Sources */,
 				CC469E4E2B25E525004D094B /* ProductsViewModel.swift in Sources */,
 				CC469E3E2B25DEF8004D094B /* NikoraApp.swift in Sources */,

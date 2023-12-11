@@ -10,17 +10,14 @@ import SwiftUI
 struct ProductCellView: View {
     
     @ObservedObject var viewModel: ProductsViewModel
-    
     var product: Grocery
     
     var body: some View {
-        
         VStack(spacing: 24) {
             HStack(spacing: 16) {
                 VStack {
-                    Image(systemName: "photo.fill")
-                        .font(.system(size: 48))
-                        .foregroundColor(CustomColors.textPrimary)
+                    Image(product.imageName)
+                        .resizable()                        .foregroundColor(CustomColors.textPrimary)
                 }
                 .frame(width: 104, height: 104)
                 .background(CustomColors.backgroundSecondary)
@@ -42,7 +39,7 @@ struct ProductCellView: View {
                     
                     HStack {
                         HStack(alignment: .center, spacing: 2) {
-                            Text("$")
+                            Text("₾")
                                 .font(.callout)
                                 .foregroundColor(CustomColors.textTertiary)
                             Text(String(format: "%.2f", product.isOnSale ? product.discountedPrice : product.price))

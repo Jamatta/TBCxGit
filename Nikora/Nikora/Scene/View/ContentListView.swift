@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentListView: View {
     
     @ObservedObject var viewModel = ProductsViewModel()
-    @State private var isSaleOn = false
+    @State private var isOnSale = false
+    @State private var isCartViewActive = false
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -28,7 +29,9 @@ struct ContentListView: View {
                     
                 }
                 .navigationBarItems(trailing:
-                                        Button(action: {}) {
+                                        Button(action: {
+                    isCartViewActive = true
+                }) {
                     ZStack(alignment: .topTrailing) {
                         Image(systemName: "cart.fill")
                             .font(Font.system(size: 22))
@@ -48,13 +51,18 @@ struct ContentListView: View {
                                     Circle()
                                         .stroke(Color.white, lineWidth: 3)
                                 )
+                                .opacity(viewModel.cart.count > 0 ? 1.0 : 0.0)
                                 .offset(x: 24, y: 0)
+                            
                         }
                     }
                     .padding(.trailing, 8)
                     
                 }
                 )
+                .sheet(isPresented: $isCartViewActive) {
+                    CartView(isCartViewActive: $isCartViewActive)
+                }
                 .toolbar {
                     ToolbarItem(placement: .principal) {
                         Text("ნიკორა")
@@ -63,17 +71,15 @@ struct ContentListView: View {
                     }
                 }
             }
-            
-            .onTapGesture {
-            }
+            .onTapGesture {}
             
             VStack {
                 VStack {
-                    Toggle("20% Sale", isOn: $isSaleOn)
+                    Toggle("20% ფასდაკლება", isOn: $isOnSale)
                         .font(.title3)
                         .bold()
                         .foregroundColor(CustomColors.textPrimary)
-                        .onChange(of: isSaleOn) { newValue in
+                        .onChange(of: isOnSale) { newValue in
                             viewModel.applySale(newValue)
                         }
                 }
@@ -81,11 +87,11 @@ struct ContentListView: View {
                 .frame(height: 64)
                 
                 Button(action: {
-                    // TODO: Action
+                    isCartViewActive = true
                 }) {
                     HStack {
                         HStack(alignment: .center) {
-                            Text("Checkout")
+                            Text("კალათა")
                                 .foregroundColor(.white)
                                 .font(.title3)
                                 .bold()
@@ -98,6 +104,9 @@ struct ContentListView: View {
                             .font(.title)
                     }
                     .padding(24)
+                    .sheet(isPresented: $isCartViewActive) {
+                        CartView(isCartViewActive: $isCartViewActive)
+                    }
                     
                 }
                 .frame(maxWidth: .infinity)
