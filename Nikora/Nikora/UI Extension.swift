@@ -10,12 +10,12 @@ import SwiftUI
 struct CustomColors {
     static let backgroundPrimary = Color(hex: 0xFDFDFE)
     static let backgroundSecondary = Color(hex: 0xF6F7FC)
-    static let textPrimary = Color(hex: 0x051E47)
+    static let textPrimary = Color(hex: 0x2E0303)
     static let textSecondary = Color(hex: 0x9BA6B8)
     static let textTertiary = Color(hex: 0xB7BBC5)
-    static let lightBlue = Color(hex: 0x2996FB)
+    static let lightBlue = Color(hex: 0xC32C52)
     static let DarkBlue = Color(hex: 0x3077CE)
-    static let skyBlue = Color(hex: 0x47B0FF)
+    static let skyBlue = Color(hex: 0xFF1C5C)
 }
 
 extension Color {
@@ -27,8 +27,4 @@ extension Color {
     }
 }
 
-//      LinearGradient(gradient: Gradient(colors: [
-//          CustomColors.lightBlue,
-//          CustomColors.DarkBlue
-//      ]), startPoint: .leading, endPoint: .trailing)
-//      .edgesIgnoringSafeArea(.all)
+      

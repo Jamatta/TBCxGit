@@ -14,21 +14,23 @@ class Grocery: Identifiable {
     var price: Double
     var stock: Int
     var quantity: Int
+    var isOnSale: Bool
     
-    init(id: UUID, name: String, brandName: String, price: Double, stock: Int, quantity: Int) {
+    var discountedPrice: Double {
+            return isOnSale ? price * 0.8 : price
+        }
+    
+    init(id: UUID, name: String, brandName: String, price: Double, stock: Int, quantity: Int, isOnSale: Bool) {
         self.id = id
         self.name = name
         self.brandName = brandName
         self.price = price
         self.stock = stock
         self.quantity = quantity
-    }
-    
-    var formattedPrice: String {
-        let formatted = String(format: "%.2f", price)
-        return formatted
+        self.isOnSale = isOnSale
     }
 }
+
 
 class ProductsViewModel: ObservableObject {
     
@@ -39,9 +41,9 @@ class ProductsViewModel: ObservableObject {
     }
     
     @Published var groceries: [Grocery] = [
-        Grocery(id: UUID(), name: "Milk", brandName: "Farm Fresh", price: 4, stock: 2, quantity: 0),
-        Grocery(id: UUID(), name: "Bread", brandName: "Bakery Delights", price: 2, stock: 18, quantity: 0),
-        Grocery(id: UUID(), name: "Apples", brandName: "Organic Farms", price: 8, stock: 6, quantity: 0)
+        Grocery(id: UUID(), name: "Milk", brandName: "Farm Fresh", price: 4, stock: 2, quantity: 0, isOnSale: false),
+        Grocery(id: UUID(), name: "Bread", brandName: "Bakery Delights", price: 2, stock: 18, quantity: 0, isOnSale: false),
+        Grocery(id: UUID(), name: "Apples", brandName: "Organic Farms", price: 8, stock: 6, quantity: 0, isOnSale: false)
     ]
     
     @Published var cart: [Grocery] = []
@@ -68,21 +70,18 @@ class ProductsViewModel: ObservableObject {
     }
     
     func applySale(_ isOn: Bool) {
-        let salePercentage: Double = isOn ? 0.8 : 1.0
         
         for index in 0..<groceries.count {
-            let originalPrice = originalPrices[index]
-            let discountedPrice = originalPrice * salePercentage
-            groceries[index].price = discountedPrice
+            groceries[index].isOnSale = !groceries[index].isOnSale
+            print("\(groceries[index].isOnSale)")
         }
+      //  objectWillChange.send()
     }
     
-    func removeLast() {
-        groceries.removeLast()
-    }
-    
-    func testClick() {
-        groceries[0].quantity += 1
-        print("\(groceries[0].name) - \(groceries[0].quantity)")
+    func printPrice() {
+        for index in 0..<groceries.count {
+            print("price - ", groceries[index].price)
+
+        }
     }
 }

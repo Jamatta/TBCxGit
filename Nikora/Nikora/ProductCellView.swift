@@ -10,8 +10,8 @@ import SwiftUI
 struct ProductCellView: View {
     
     @ObservedObject var viewModel: ProductsViewModel
-        
-    let product: Grocery
+    
+    var product: Grocery
     
     var body: some View {
         
@@ -45,7 +45,7 @@ struct ProductCellView: View {
                             Text("$")
                                 .font(.callout)
                                 .foregroundColor(CustomColors.textTertiary)
-                            Text("\(product.formattedPrice)")
+                            Text(String(format: "%.2f", product.isOnSale ? product.discountedPrice : product.price))
                                 .font(.title3)
                                 .bold()
                                 .foregroundColor(CustomColors.textPrimary)
@@ -62,6 +62,7 @@ struct ProductCellView: View {
                                     .font(.title)
                             }
                             .buttonStyle(.plain)
+                            .disabled(product.quantity == 0 ? true : false)
                             
                             VStack {
                                 Text("\(product.quantity)")
@@ -74,14 +75,13 @@ struct ProductCellView: View {
                             Button(action: {
                                 viewModel.addToCart(product)
                                 
-                                //TODO: Action
-                                
                             }) {
                                 Image(systemName: "plus.square.fill")
                                     .foregroundColor(CustomColors.skyBlue)
                                     .font(.title)
                             }
-                            .buttonStyle(BorderlessButtonStyle())
+                            .buttonStyle(.plain)
+                            .disabled(product.stock == 0 ? true : false)
                         }
                         .padding(4)
                         .background(CustomColors.backgroundSecondary)
