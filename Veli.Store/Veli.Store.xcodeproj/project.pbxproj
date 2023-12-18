@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC1820EF2B30F06B00CC1AF5 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1820EE2B30F06B00CC1AF5 /* ProductDetailView.swift */; };
+		CC1820F12B30FBAE00CC1AF5 /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1820F02B30FBAE00CC1AF5 /* HeaderViewModel.swift */; };
+		CC89E37A2B3042FF0024836E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89E3792B3042FF0024836E /* MainViewModel.swift */; };
+		CC89E37C2B3044150024836E /* ProductsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89E37B2B3044150024836E /* ProductsModel.swift */; };
+		CC89E3822B3059390024836E /* NetworkManager in Frameworks */ = {isa = PBXBuildFile; productRef = CC89E3812B3059390024836E /* NetworkManager */; };
+		CC89E3842B3060860024836E /* HeaderComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89E3832B3060860024836E /* HeaderComponentView.swift */; };
+		CC89E3862B308BB80024836E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89E3852B308BB80024836E /* MainView.swift */; };
+		CC89E3882B3092A20024836E /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89E3872B3092A20024836E /* ProductCardView.swift */; };
+		CC89E38C2B30CD6F0024836E /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89E38B2B30CD6F0024836E /* CategoriesView.swift */; };
+		CC89E38E2B30CF5D0024836E /* CategoriesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89E38D2B30CF5D0024836E /* CategoriesListModel.swift */; };
+		CC89E3902B30E5590024836E /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC89E38F2B30E5590024836E /* CategoryListView.swift */; };
+		CCD1B2DF2B2F9DD7000F48D8 /* Veli_StoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD1B2DE2B2F9DD7000F48D8 /* Veli_StoreApp.swift */; };
+		CCD1B2E32B2F9DD8000F48D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD1B2E22B2F9DD8000F48D8 /* Assets.xcassets */; };
+		CCD1B2E62B2F9DD8000F48D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCD1B2E52B2F9DD8000F48D8 /* Preview Assets.xcassets */; };
+		CCD1B2F32B2F9E9C000F48D8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD1B2F22B2F9E9C000F48D8 /* Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC1820EE2B30F06B00CC1AF5 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		CC1820F02B30FBAE00CC1AF5 /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
+		CC89E3792B3042FF0024836E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		CC89E37B2B3044150024836E /* ProductsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsModel.swift; sourceTree = "<group>"; };
+		CC89E3832B3060860024836E /* HeaderComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponentView.swift; sourceTree = "<group>"; };
+		CC89E3852B308BB80024836E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CC89E3872B3092A20024836E /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
+		CC89E38B2B30CD6F0024836E /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		CC89E38D2B30CF5D0024836E /* CategoriesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListModel.swift; sourceTree = "<group>"; };
+		CC89E38F2B30E5590024836E /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
+		CCD1B2DB2B2F9DD7000F48D8 /* Veli.Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Veli.Store.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD1B2DE2B2F9DD7000F48D8 /* Veli_StoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Veli_StoreApp.swift; sourceTree = "<group>"; };
+		CCD1B2E22B2F9DD8000F48D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCD1B2E52B2F9DD8000F48D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCD1B2F22B2F9E9C000F48D8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCD1B2D82B2F9DD7000F48D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC89E3822B3059390024836E /* NetworkManager in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CC1820F22B31074E00CC1AF5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CC89E3852B308BB80024836E /* MainView.swift */,
+				CC89E3792B3042FF0024836E /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CC1820F32B31075400CC1AF5 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CC89E38D2B30CF5D0024836E /* CategoriesListModel.swift */,
+				CC89E38F2B30E5590024836E /* CategoryListView.swift */,
+				CC89E38B2B30CD6F0024836E /* CategoriesView.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		CC1820F42B31075E00CC1AF5 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				CC1820EE2B30F06B00CC1AF5 /* ProductDetailView.swift */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
+		CCD1B2D22B2F9DD7000F48D8 = {
+			isa = PBXGroup;
+			children = (
+				CCD1B2DD2B2F9DD7000F48D8 /* Veli.Store */,
+				CCD1B2DC2B2F9DD7000F48D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCD1B2DC2B2F9DD7000F48D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCD1B2DB2B2F9DD7000F48D8 /* Veli.Store.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCD1B2DD2B2F9DD7000F48D8 /* Veli.Store */ = {
+			isa = PBXGroup;
+			children = (
+				CCD1B2F12B2F9E84000F48D8 /* App */,
+				CCD1B2F02B2F9E7B000F48D8 /* Scenes */,
+				CCD1B2EF2B2F9E72000F48D8 /* Components */,
+				CCD1B2EE2B2F9E58000F48D8 /* Model */,
+				CCD1B2ED2B2F9E51000F48D8 /* Extension */,
+				CCD1B2EC2B2F9E46000F48D8 /* Helper */,
+				CCD1B2E22B2F9DD8000F48D8 /* Assets.xcassets */,
+				CCD1B2E42B2F9DD8000F48D8 /* Preview Content */,
+			);
+			path = Veli.Store;
+			sourceTree = "<group>";
+		};
+		CCD1B2E42B2F9DD8000F48D8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CCD1B2E52B2F9DD8000F48D8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CCD1B2EC2B2F9E46000F48D8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		CCD1B2ED2B2F9E51000F48D8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CCD1B2F22B2F9E9C000F48D8 /* Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		CCD1B2EE2B2F9E58000F48D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC89E37B2B3044150024836E /* ProductsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CCD1B2EF2B2F9E72000F48D8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CC89E3832B3060860024836E /* HeaderComponentView.swift */,
+				CC89E3872B3092A20024836E /* ProductCardView.swift */,
+				CC1820F02B30FBAE00CC1AF5 /* HeaderViewModel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CCD1B2F02B2F9E7B000F48D8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CC1820F22B31074E00CC1AF5 /* Main */,
+				CC1820F42B31075E00CC1AF5 /* ProductDetail */,
+				CC1820F32B31075400CC1AF5 /* Category */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CCD1B2F12B2F9E84000F48D8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CCD1B2DE2B2F9DD7000F48D8 /* Veli_StoreApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCD1B2DA2B2F9DD7000F48D8 /* Veli.Store */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCD1B2E92B2F9DD8000F48D8 /* Build configuration list for PBXNativeTarget "Veli.Store" */;
+			buildPhases = (
+				CCD1B2D72B2F9DD7000F48D8 /* Sources */,
+				CCD1B2D82B2F9DD7000F48D8 /* Frameworks */,
+				CCD1B2D92B2F9DD7000F48D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Veli.Store;
+			packageProductDependencies = (
+				CC89E3812B3059390024836E /* NetworkManager */,
+			);
+			productName = Veli.Store;
+			productReference = CCD1B2DB2B2F9DD7000F48D8 /* Veli.Store.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCD1B2D32B2F9DD7000F48D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CCD1B2DA2B2F9DD7000F48D8 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CCD1B2D62B2F9DD7000F48D8 /* Build configuration list for PBXProject "Veli.Store" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCD1B2D22B2F9DD7000F48D8;
+			packageReferences = (
+				CC89E3802B3059390024836E /* XCRemoteSwiftPackageReference "NetworkManager" */,
+			);
+			productRefGroup = CCD1B2DC2B2F9DD7000F48D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCD1B2DA2B2F9DD7000F48D8 /* Veli.Store */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCD1B2D92B2F9DD7000F48D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD1B2E62B2F9DD8000F48D8 /* Preview Assets.xcassets in Resources */,
+				CCD1B2E32B2F9DD8000F48D8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCD1B2D72B2F9DD7000F48D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC89E38C2B30CD6F0024836E /* CategoriesView.swift in Sources */,
+				CCD1B2F32B2F9E9C000F48D8 /* Extension.swift in Sources */,
+				CC1820EF2B30F06B00CC1AF5 /* ProductDetailView.swift in Sources */,
+				CC89E38E2B30CF5D0024836E /* CategoriesListModel.swift in Sources */,
+				CC89E3862B308BB80024836E /* MainView.swift in Sources */,
+				CC1820F12B30FBAE00CC1AF5 /* HeaderViewModel.swift in Sources */,
+				CC89E3902B30E5590024836E /* CategoryListView.swift in Sources */,
+				CC89E37C2B3044150024836E /* ProductsModel.swift in Sources */,
+				CC89E3842B3060860024836E /* HeaderComponentView.swift in Sources */,
+				CCD1B2DF2B2F9DD7000F48D8 /* Veli_StoreApp.swift in Sources */,
+				CC89E37A2B3042FF0024836E /* MainViewModel.swift in Sources */,
+				CC89E3882B3092A20024836E /* ProductCardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CCD1B2E72B2F9DD8000F48D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCD1B2E82B2F9DD8000F48D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCD1B2EA2B2F9DD8000F48D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Veli.Store/Preview Content\"";
+				DEVELOPMENT_TEAM = M9WWDC922T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "idk.Veli-Store";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCD1B2EB2B2F9DD8000F48D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Veli.Store/Preview Content\"";
+				DEVELOPMENT_TEAM = M9WWDC922T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "idk.Veli-Store";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCD1B2D62B2F9DD7000F48D8 /* Build configuration list for PBXProject "Veli.Store" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCD1B2E72B2F9DD8000F48D8 /* Debug */,
+				CCD1B2E82B2F9DD8000F48D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCD1B2E92B2F9DD8000F48D8 /* Build configuration list for PBXNativeTarget "Veli.Store" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCD1B2EA2B2F9DD8000F48D8 /* Debug */,
+				CCD1B2EB2B2F9DD8000F48D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CC89E3802B3059390024836E /* XCRemoteSwiftPackageReference "NetworkManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Jamatta/NetworkManager";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CC89E3812B3059390024836E /* NetworkManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC89E3802B3059390024836E /* XCRemoteSwiftPackageReference "NetworkManager" */;
+			productName = NetworkManager;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CCD1B2D32B2F9DD7000F48D8 /* Project object */;
+}
