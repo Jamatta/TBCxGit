@@ -13,10 +13,12 @@ struct HomeScreenView: View {
     @ObservedObject var tipsModel = TravelTipsViewModel()
     @State private var showAlert = false
     @State private var randomTip = ""
+    @State private var navPath = [Int]()
+    
     
     var body: some View {
         
-        NavigationStack {
+        NavigationStack(path: $navPath) {
             ZStack(alignment: .bottom) {
                 ScrollView {
                     LazyVGrid(columns: [

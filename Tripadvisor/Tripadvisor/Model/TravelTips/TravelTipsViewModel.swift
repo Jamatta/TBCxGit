@@ -23,7 +23,7 @@ class TravelTipsViewModel: ObservableObject {
     ]
     
     func displayRandomTip() -> String {
-        let randomNumber = Int.random(in: 1...10)
+        var randomNumber = Int.random(in: 1...10)
         
         return travelingTips[randomNumber]
         
