@@ -64,8 +64,8 @@ struct MessengerListView: View {
                     .listRowBackground(Color(UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1)))
                     .listRowSeparatorTint(Color.gray)
             }
-            .listStyle(.grouped)
-            .scrollContentBackground(.hidden)
+            .listStyle(.plain)
+           // .scrollContentBackground(.hidden)
         }
     
     private func chatRow(for chat: ChatItem) -> some View {
