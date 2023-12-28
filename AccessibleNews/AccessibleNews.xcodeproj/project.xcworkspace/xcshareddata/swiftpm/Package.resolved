@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "networkmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Jamatta/NetworkManager",
+      "state" : {
+        "branch" : "main",
+        "revision" : "52fc659a0f9a43c59eceb54966a531abcdfbd8c5"
+      }
+    }
+  ],
+  "version" : 2
+}
