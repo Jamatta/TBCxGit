@@ -7,45 +7,19 @@
 
 import SwiftUI
 
-struct ArticlesData: Decodable {
-    let Articles: [Article]
+// MARK: - NewsData
+struct NewsData: Decodable {
+    let data: [News]
 }
 
-//struct News: Decodable {
-//    let uuid: String
-//    let title: String
-//    let description: String
-//    let url: String
-//    let imageURL: String
-//    
-//    enum CodingKeys: String, CodingKey {
-//          case uuid, title, description, url
-//          case imageURL = "image_url"
-//      }
-//}
-// ----------------------------------
+// MARK: - News
+struct News: Decodable {
+    let title, description: String
+    let publishedAt, source: String
 
-// MARK: - Welcome
-struct Welcome: Decodable {
-    let status: String
-    let totalResults: Int
-    let articles: [Article]
-}
-
-// MARK: - Article
-struct Article: Decodable {
-    let source: Source
-    let author: String?
-    let title: String
-    let description: String?
-    let url: String
-    let urlToImage: String?
-    let publishedAt: Date
-    let content: String
-}
-
-// MARK: - Source
-struct Source: Decodable {
-    let id: String?
-    let name: String
+    enum CodingKeys: String, CodingKey {
+        case title, description
+        case publishedAt = "published_at"
+        case source
+    }
 }

@@ -10,9 +10,11 @@ import SwiftUI
 @main
 struct AccessibleNewsApp: App {
     
+    @State var viewModel = NewsViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            NewsView(viewModel: NewsViewModel())
+            UITableViewRepresentable(viewModel: NewsViewModel())
         }
     }
 }
